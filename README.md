@@ -1,6 +1,8 @@
 # SQLi-lab
 An SQL injection playground, from basic to advanced
 
+![Homepage picture](static/index.png)
+
 ## How to use
 
 * Clone the repo
