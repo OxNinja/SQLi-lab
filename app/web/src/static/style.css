@@ -1,0 +1,167 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code&display=swap');
+
+:root {
+    --bg: #0f161e;
+    --grey-dark: #aaa;
+    --grey-light: #595a59;
+    --green-light: #89e2c2;
+    --green-dark: #5f9e87;
+    --red: #b95052;
+    --yellow: #b7a740;
+    --purple: #93419c;
+    --white: #ddd;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Fira Code', monospace;
+    color: var(--white);
+    background-color: var(--bg);
+    text-decoration: none;
+    transition: .3s;
+}
+
+
+a
+{
+    color: var(--green-light);
+}
+
+a:hover
+{
+    color: var(--green-dark);
+}
+
+footer
+{
+    margin-top: 150px;
+    text-align: center;
+}
+
+form
+{
+    margin: 15px;
+}
+
+form input
+{
+    padding: 5px;
+}
+
+form input[type="text"], form input[type="password"]
+{
+    border: 2px solid var(--green-light);
+    border-radius: 3px;
+}
+
+table
+{
+    margin: 30px;
+    border-collapse: collapse;
+}
+
+table, th, td
+{
+    border: 1px solid var(--white);
+}
+
+table th, table td
+{
+    padding: 5px 12px;
+}
+
+table th
+{
+    font-weight: bold;
+}
+
+
+.synopsis
+{
+    margin: 15px;
+    margin: auto;
+    padding: 15px;
+    color: var(--grey-dark);
+    font-style: italic;
+    max-width: 69%;
+}
+
+.synopsis:before
+{
+    content: "> ";
+}
+
+.button
+{
+    border: none;
+    display: inline-block;
+    width: auto;
+}
+
+.button:hover
+{
+    cursor: pointer;
+}
+
+.small
+{
+    margin: 10px;
+    padding: 6px 20px;
+    border-radius: 15px;
+}
+
+.big
+{
+    margin: 20px;
+    padding: 20px 45px;
+    font-size: 25px;
+    font-weight: bold;
+    border-radius: 30px;
+}
+
+.green
+{
+    background-color: var(--green-dark);
+    color: var(--white);
+}
+
+.green:hover
+{
+    background-color: var(--green-light);
+    color: var(--bg);
+}
+
+
+#centered-main
+{
+    width: 70vw;
+    margin: auto;
+}
+
+#index-logo
+{
+    width: 100%;
+    margin: auto;
+    margin-top: 100px;
+    display: flex;
+}
+
+#index-logo > img
+{
+    width: 256px;
+}
+
+#index-logo > div
+{
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+
+#index-logo #start
+{
+    text-align: center;
+}
