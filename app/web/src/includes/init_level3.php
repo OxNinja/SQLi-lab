@@ -2,6 +2,7 @@
 
 $db = connect_db();
 $qs = array();
+array_push($qs, 'drop table if exists `database`.`level2`');
 array_push($qs, 'drop table if exists `database`.`level3_products`');
 array_push($qs, 'create table `database`.`level3_products` (product text, price float)');
 array_push($qs, 'insert into `database`.`level3_products` (product, price) values ("Gamer\'s bath water", 50)');

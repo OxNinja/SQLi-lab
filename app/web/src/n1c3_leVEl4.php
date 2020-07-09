@@ -1,36 +1,37 @@
 <?php
 require_once('includes/config.php');
 require_once('includes/functions.php');
-require_once('includes/init_level1.php');
+require_once('includes/init_level4.php');
 include 'includes/head.php';
 ?>
 
-<h1>Level 1</h1>
+<h1>Level 4</h1>
 
-<p class="synopsis">I don't remember my passwords for some sites, so I store them in a database. But I am not dumb, in order to retrieve a password I must enter the name of the website.</p>
-<!-- You don't really need any COMMENT about the page. -->
+<p class="synopsis">This is a nice little blog, you can read some articles. But maybe you can do more ?</p>
+<!-- The European UNION is not the same as the Soviet UNION. -->
 
-<form method="post">
-    <input type="text" name="website" placeholder="mail.google.com">
-    <input class="button small green" type="submit" value="Get password">
-</form>
+<h2>Select an article :</h2>
+<div class="list">
+    <a class="button small green" href="?id=1">1</a>
+    <a class="button small green" href="?id=2">2</a>
+    <a class="button small green" href="?id=3">3</a>
+</div>
 
 <?php
 
-if(isset($_POST["website"])) {
+if(isset($_GET["id"])) {
     $db = connect_db();
-    $a = $_POST["website"];
-    echo "Result for '$a':\n";
-    $q = "select * from level1 where site ='$a'";
+    $a = $_GET["id"];
+    $q = "select * from level4_articles where id='$a'";
     $r = $db -> query($q);
     $db -> close();
-    echo "<table><tr><th>Password</th><th>Website</th></tr>";
+    echo "<article>";
     if($r -> num_rows > 0) {
         while($res = $r -> fetch_row()) {
-            echo "<tr><td>$res[0]</td><td>$res[1]</td></tr>";
+            echo "<!-- $res[0] --><h3>$res[1]</h3><p>$res[2]</p>";
         }   
     }
-    echo "</table>";
+    echo "</article>";
 }
 
 ?>
