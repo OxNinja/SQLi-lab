@@ -1,4 +1,5 @@
-# SQLi-lab
+# SQLi-lab 💉
+
 An SQL injection playground, from basic to advanced
 
 **Will you solve all the levels ?**
@@ -8,10 +9,9 @@ An SQL injection playground, from basic to advanced
 ## How to use
 
 * Clone the repo
-* `docker-compose up --build`
+* `./build.sh`
 * `firefox http://172.16.0.2`
 * Start hacking !
-* Don't forget to `docker-compose down` once finished
 
 > Tip: add it to your hosts file : `echo '172.16.0.2 sqli.lab' >> /etc/hosts && firefox http://sqli.lab` :smiley:
 
